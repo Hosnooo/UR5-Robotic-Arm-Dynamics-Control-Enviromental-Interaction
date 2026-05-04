@@ -1,4 +1,4 @@
-%% run_ur5_pick_place_ik_video.m
+%% run_ur5_pick_place_ik.m
 % UR5 numerical IK pick-and-place animation with video export.
 %
 % This script:
