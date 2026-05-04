@@ -23,24 +23,10 @@ The main focus areas are:
 - Constrained path tracking, including sphere-constrained motion
 - Reduced dynamic parameterization analysis
 
-## Demo Video
-
-The following video shows a UR5 pick-and-place task simulated using the full nonlinear dynamics model and a computed-torque tracking controller.
-
-<video src="assets/ur5_pick_place_dynamics_control.mp4" controls width="800"></video>
-
-If the video does not render directly on GitHub, open it from:
-
-```text
-assets/ur5_pick_place_dynamics_control.mp4
-```
-
 ## Repository Structure
 
 ```text
 .
-├── assets/
-│   └── ur5_pick_place_dynamics_control.mp4
 │
 ├── maple_gen/
 │   ├── UR5_C.m
