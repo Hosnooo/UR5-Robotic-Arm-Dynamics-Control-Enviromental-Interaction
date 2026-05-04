@@ -4,23 +4,41 @@ MATLAB simulation environment for studying the dynamics, control, trajectory tra
 
 ## Overview
 
-This repository provides MATLAB scripts for simulating and comparing multiple robotic-arm control strategies for a 6-DOF UR5 manipulator. The project includes generated robot dynamics functions, parameter definitions, controller simulations, trajectory tracking experiments, impedance-control scenarios, and constrained environmental interaction tasks.
+This repository provides MATLAB scripts for simulating and comparing multiple robotic-arm control strategies for a 6-DOF UR5 manipulator. The project includes generated robot dynamics functions, parameter definitions, controller simulations, trajectory tracking experiments, impedance-control scenarios, inverse-kinematics task animation, full nonlinear dynamics simulation, and constrained environmental interaction tasks.
 
 The main focus areas are:
 
 - Rigid-body dynamics and kinematics of the UR5 manipulator
 - Joint-space regulation and tracking control
 - PD, PID, gravity-compensated, and feedback-linearization-based controllers
+- Numerical inverse kinematics for task-space motion generation
+- Full nonlinear dynamic simulation with computed-torque control
+- External payload/load compensation during pick-and-place motion
 - Parameter uncertainty studies
 - Cartesian impedance control under external forces
 - Hybrid force/motion control during contact with a plane
 - Constrained path tracking, including sphere-constrained motion
 - Reduced dynamic parameterization analysis
 
+## Demo Video
+
+The following video shows a UR5 pick-and-place task simulated using the full nonlinear dynamics model and a computed-torque tracking controller.
+
+<video src="assets/ur5_pick_place_dynamics_control.mp4" controls width="800"></video>
+
+If the video does not render directly on GitHub, open it from:
+
+```text
+assets/ur5_pick_place_dynamics_control.mp4
+```
+
 ## Repository Structure
 
 ```text
 .
+├── assets/
+│   └── ur5_pick_place_dynamics_control.mp4
+│
 ├── maple_gen/
 │   ├── UR5_C.m
 │   ├── UR5_G.m
@@ -36,6 +54,7 @@ The main focus areas are:
 │
 ├── utils/
 │   ├── figureoptscall.m
+│   ├── inverse_kinematics.m
 │   └── saveFigureAsPDF.m
 │
 ├── UR5_params.m
@@ -50,7 +69,9 @@ The main focus areas are:
 ├── run_ur5_fb_tracking_uncertain.m
 ├── run_ur5_cartesian_impedance.m
 ├── run_ur5_hybrid_plane_force_motion.m
-└── run_ur5_sphere_constrained_tracking.m
+├── run_ur5_sphere_constrained_tracking.m
+├── run_ur5_pick_place_ik.m
+└── run_ur5_pick_place_dynamics_control.m
 ```
 
 ## Main Components
@@ -88,7 +109,17 @@ These functions are used by the simulation scripts and should remain on the MATL
 
 ### `utils/`
 
-Contains helper functions for figure formatting and exporting plots to PDF.
+Contains helper functions for numerical inverse kinematics, figure formatting, and exporting plots to PDF.
+
+The main utility files are:
+
+- `inverse_kinematics.m`: reusable damped least-squares numerical inverse-kinematics solver
+- `figureoptscall.m`: common figure formatting and LaTeX-style plot configuration
+- `saveFigureAsPDF.m`: PDF export utility used by the simulation scripts
+
+### `assets/`
+
+Contains media files used by the README, including the exported pick-and-place simulation video.
 
 ## Simulation Scripts
 
@@ -106,15 +137,17 @@ Contains helper functions for figure formatting and exporting plots to PDF.
 | `run_ur5_cartesian_impedance.m` | Simulates Cartesian impedance control with and without external force disturbances. |
 | `run_ur5_hybrid_plane_force_motion.m` | Simulates hybrid force/motion control while interacting with a rigid plane. |
 | `run_ur5_sphere_constrained_tracking.m` | Simulates constrained tracking on a spherical surface. |
+| `run_ur5_pick_place_ik.m` | Generates and animates a pick-and-place task using numerical inverse kinematics. |
+| `run_ur5_pick_place_dynamics_control.m` | Simulates the pick-and-place task using full nonlinear dynamics, computed-torque control, and payload torque compensation. |
 
 ## Requirements
 
 The project is written in MATLAB.
 
-Recommended MATLAB toolboxes:
+Recommended tools and toolboxes:
 
 - MATLAB base environment
-- Maple base enviroment, if regenerating or modifying symbolic dynamics
+- Maple base environment, if regenerating or modifying symbolic dynamics
 - Robotics System Toolbox, if using or modifying rigid-body-tree validation scripts
 
 No external Python or C++ dependencies are required for the provided MATLAB simulations.
@@ -198,6 +231,77 @@ run_ur5_hybrid_plane_force_motion
 
 This script simulates motion control in the tangent directions of a plane while regulating the contact force in the plane-normal direction.
 
+### Run inverse-kinematics pick-and-place animation
+
+```matlab
+run_ur5_pick_place_ik
+```
+
+This script generates a smooth pick-and-place task in Cartesian space, solves the corresponding joint trajectory using the numerical inverse-kinematics utility, animates the UR5 motion, and saves a video.
+
+### Run full-dynamics pick-and-place control
+
+```matlab
+run_ur5_pick_place_dynamics_control
+```
+
+This script first generates a pick-and-place reference trajectory using numerical inverse kinematics. It then simulates the full nonlinear UR5 dynamics under a computed-torque tracking controller. During the carrying phase, an external payload torque is included and compensated through the controller.
+
+## Pick-and-Place Study
+
+The pick-and-place task is split into two levels:
+
+### Kinematic level
+
+The script `run_ur5_pick_place_ik.m` uses numerical inverse kinematics to answer:
+
+```text
+What joint trajectory allows the end-effector to follow the desired pick-and-place path?
+```
+
+It uses:
+
+- `UR5_fkine.m`
+- `UR5_fkall.m`
+- `UR5_jacobian_geometric.m`
+- `utils/inverse_kinematics.m`
+
+### Dynamic level
+
+The script `run_ur5_pick_place_dynamics_control.m` uses the IK-generated joint trajectory as the reference for a full nonlinear dynamic simulation.
+
+The controller is a computed-torque tracking controller of the form:
+
+```text
+tau = M(q) v + h(q,dq) + G(q)
+```
+
+where:
+
+```text
+v = ddq_d + Kd(dq_d - dq) + Kp(q_d - q)
+```
+
+When the payload is carried, the payload force is mapped into joint space as:
+
+```text
+tau_ext = J_v(q)^T F_ext
+```
+
+and compensated in the motor command using:
+
+```text
+tau_motor = tau - tau_ext
+```
+
+The plant then receives:
+
+```text
+tau_total = tau_motor + tau_ext
+```
+
+which keeps the simulation physically meaningful while allowing compensation of the known external payload load.
+
 ## Output Files
 
 Each simulation creates a dedicated results folder. Depending on the script, outputs may include:
@@ -207,6 +311,7 @@ Each simulation creates a dedicated results folder. Depending on the script, out
 - MAT files containing simulation structures and metrics
 - MATLAB figures
 - PDF figures, when the figure export utilities are available
+- MP4 or AVI videos for animation scripts
 
 Example result folders include:
 
@@ -217,6 +322,7 @@ ur5_fb_tracking_results/
 ur5_fb_uncertainty_results/
 ur5_cartesian_impedance_results/
 ur5_hybrid_plane_results/
+ur5_pick_place_dynamics_results/
 ```
 
 ## Typical Metrics
@@ -234,6 +340,8 @@ The scripts compute and save metrics such as:
 - Settling time
 - Contact-force error
 - Constraint violation magnitude
+- Joint tracking error
+- End-effector tracking error
 
 ## Control Methods Included
 
@@ -253,18 +361,23 @@ The repository includes simulations for several control approaches.
 - Feedforward plus variable PD
 - Feedback linearization with PD and feedforward
 - Feedback linearization with PID and feedforward
+- Computed-torque tracking control
 
 ### Cartesian and Interaction Control
 
+- Numerical inverse kinematics
 - Cartesian impedance control
 - External force disturbance response
+- External payload torque compensation
 - Hybrid force/motion control
 - Plane-constrained contact simulation
 - Sphere-constrained trajectory tracking
 
-## Notes on Generated Dynamics
+## Notes on Symbolic and Generated Dynamics
 
-The functions in `maple_gen/` are generated UR5 model functions and are expected to be called by the simulation scripts. Avoid editing them manually unless you are intentionally changing the robot model or regenerating the symbolic dynamics.
+The symbolic robot model is developed in the Maple worksheet `maple_gen/symbolic_robot_dyns.mw`. This worksheet documents the symbolic derivation process and is used to generate the analytical MATLAB dynamics and kinematics functions.
+
+The MATLAB functions in `maple_gen/` are generated UR5 model functions and are expected to be called by the simulation scripts. Avoid editing the generated `.m` files manually unless you are intentionally changing the robot model or regenerating the symbolic dynamics from the Maple worksheet.
 
 The parameter vector `Pi` created by `UR5_params.m` must match the parameter ordering expected by the generated functions.
 
@@ -275,7 +388,9 @@ The parameter vector `Pi` created by `UR5_params.m` must match the parameter ord
 3. Run `run_ur5_pid_sweep.m` to tune integral gains.
 4. Run `run_ur5_fb_tracking_known.m` for full-model tracking comparison.
 5. Run `run_ur5_fb_tracking_uncertain.m` to study robustness.
-6. Run Cartesian/environment-interaction scripts for advanced simulations.
+6. Run `run_ur5_pick_place_ik.m` to visualize a task-space pick-and-place trajectory.
+7. Run `run_ur5_pick_place_dynamics_control.m` to simulate full nonlinear dynamics with computed-torque control.
+8. Run Cartesian/environment-interaction scripts for advanced simulations.
 
 ## Citation
 
