@@ -11,19 +11,21 @@
 clear; clc; close all;
 
 %% Paths
-scriptDir = fileparts(mfilename('fullpath'));
-if isempty(scriptDir)
-    scriptDir = pwd;
-end
+addpath('maple_gen');
+addpath('utils');
 
-addpath(fullfile(scriptDir, 'maple_gen'));
-addpath(fullfile(scriptDir, 'utils'));
+USE_FIG_HELPERS = (exist('figureoptscall','file') == 2) && ...
+                  (exist('saveFigureAsPDF','file') == 2);
+
+if USE_FIG_HELPERS
+    figureoptscall;
+end
 
 %% Load UR5 parameters
 [~, Pi] = UR5_params();
 
 %% Video settings
-videoFile = fullfile(scriptDir, 'ur5_pick_place_ik_animation.mp4');
+videoFile = fullfile('ur5_pick_place_ik_animation.mp4');
 fps = 30;
 
 %% Numerical IK settings
@@ -90,8 +92,8 @@ for i = 1:size(segments,1)
     end
 
     pDes = [pDes, pts]; %#ok<AGROW>
-    objectMode = [objectMode, mode*ones(1,size(pts,2))]; %#ok<AGROW>
-    phaseIndex = [phaseIndex, i*ones(1,size(pts,2))]; %#ok<AGROW>
+    objectMode = [objectMode, mode*ones(1,size(pts,2))];
+    phaseIndex = [phaseIndex, i*ones(1,size(pts,2))];
 end
 
 nTotal = size(pDes,2);
@@ -134,7 +136,7 @@ for k = 1:nTotal
 end
 
 allPts = reshape(linkPositions, 3, []);
-allPts = [allPts, pDes, pPick, pPlace, pPickAbove, pPlaceAbove]; %#ok<AGROW>
+allPts = [allPts, pDes, pPick, pPlace, pPickAbove, pPlaceAbove];
 
 padding = 0.18;
 xyzMin = min(allPts, [], 2) - padding;
@@ -175,7 +177,7 @@ for k = 1:nTotal
     ylim([xyzMin(2), xyzMax(2)]);
     zlim([xyzMin(3), xyzMax(3)]);
 
-    view(150, 25);
+    view(170, 25);
     set(gca, 'FontSize', 11);
 
     drawFloor(xyzMin, xyzMax);
