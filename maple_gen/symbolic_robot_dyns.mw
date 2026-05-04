@@ -1,0 +1,722 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Worksheet>
+<Version major="2021" minor="1"/>
+<Label-Scheme value="2" prefix=""/>
+<View-Properties presentation="false" autoexpanding_sections="true" UserProfileName="Maple Default Profile" NumericFormat-ApplyInteger="true" NumericFormat-ApplyRational="true" NumericFormat-ApplyExponent="false" editable="true">
+</View-Properties>
+<MapleNet-Properties prettyprint="3" warnlevel="3" compactdisplay="false" preplot="" helpbrowser="standard" displayprecision="-1" echo="1" scientificx="true" unitattributes="&quot;fontweight&quot; = &quot;bold&quot;" imaginaryunit="I" longdelim="true" elisiontermsthreshold="10000" elisiondigitsafter="100" elisiondigitsbefore="100" plotdevice="inline" errorbreak="1" plotoptions="" plotdriver="opengl" quiet="false" elisiontermsbefore="100" elisiontermsafter="100" historytimestamp="false" screenwidth="79" indentamount="4" plotoutput="terminal" screenpixelheight="1080" rtablesize="[10, 10]" useclientjvm="true" format="worksheet" labelwidth="20" postplot="" typesetting="extended" ansi="false" ansicolor="[]" elisiondigitsthreshold="10000" showassumed="1" ansilprint="false" trailingsemicolon="true" errorcursor="false" labelling="true" screenheight="25" prompt="&gt; " verboseproc="1" latexwidth="8.0" ShowLabels="true"/>
+<Styles>
+<Font name="Heading 1" background="[255,255,255]" bold="true" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="18" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Warning" background="[255,255,255]" bold="false" executable="false" family="Courier New" foreground="[0,0,255]" italic="false" opaque="false" readonly="true" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="2D Output" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,255]" italic="false" opaque="false" readonly="true" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Heading 4" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="true" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Line Printed Output" background="[255,255,255]" bold="false" executable="false" family="Courier New" foreground="[0,0,255]" italic="false" opaque="false" readonly="true" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Heading 2" background="[255,255,255]" bold="true" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="16" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Maple Output" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="2D Inert Output" background="[255,255,255]" bold="false" executable="true" family="Times New Roman" foreground="[144,144,144]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Heading 3" background="[255,255,255]" bold="true" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="true" opaque="false" readonly="false" size="14" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Diagnostic" background="[255,255,255]" bold="false" executable="false" family="Courier New" foreground="[40,120,40]" italic="false" opaque="false" readonly="true" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Ordered List 1" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Maple Input" background="[255,255,255]" bold="true" executable="true" family="Courier New" foreground="[120,0,14]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Text Output" background="[255,255,255]" bold="false" executable="false" family="Courier New" foreground="[0,0,255]" italic="false" opaque="false" readonly="true" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Ordered List 2" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Ordered List 3" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Ordered List 4" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Ordered List 5" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Annotation Title" background="[255,255,255]" bold="true" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="18" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Header and Footer" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="10" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="HyperlinkError" background="[255,255,255]" bold="false" executable="false" family="Courier New" foreground="[255,0,255]" italic="false" opaque="false" readonly="true" size="12" subscript="false" superscript="false" underline="true" placeholder="false"/>
+<Font name="Atomic Variable" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[175,0,175]" italic="true" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="HyperlinkWarning" background="[255,255,255]" bold="false" executable="false" family="Courier New" foreground="[0,0,255]" italic="false" opaque="false" readonly="true" size="12" subscript="false" superscript="false" underline="true" placeholder="false"/>
+<Font name="Dictionary Hyperlink" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[147,0,15]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="true" placeholder="false"/>
+<Font name="2D Math" background="[255,255,255]" bold="false" executable="true" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Bullet Item" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Maple Plot" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Annotation Text" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="List Item" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Dash Item" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="2D Input" background="[255,255,255]" bold="false" executable="true" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Error" background="[255,255,255]" bold="false" executable="false" family="Courier New" foreground="[255,0,255]" italic="false" opaque="false" readonly="true" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Title" background="[255,255,255]" bold="true" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="18" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Text" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Normal" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Caption Reference" background="[255,255,255]" bold="true" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Code" background="[255,255,255]" bold="false" executable="false" family="Courier New" foreground="[255,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Maple Input Placeholder" background="[255,255,255]" bold="true" executable="true" family="Courier New" foreground="[200,0,200]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="true"/>
+<Font name="Equation Label" background="[255,255,255]" bold="true" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Author" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Hyperlink" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,128,128]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="true" placeholder="false"/>
+<Font name="Caption Text" background="[255,255,255]" bold="true" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Layout name="Heading 1" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="8" spacebelow="4" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Warning" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Heading 4" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Line Printed Output" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="any" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Heading 2" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="8" spacebelow="2" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Maple Output" alignment="centred" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.3" spaceabove="0" spacebelow="0" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Heading 3" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Diagnostic" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="any" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Ordered List 1" alignment="left" bullet="numeric" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="3" spacebelow="3" linebreak="space" pagebreak-before="false" initial="-1" bulletsuffix="."/>
+<Layout name="Text Output" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="newline" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Ordered List 2" alignment="left" bullet="alphabetic" firstindent="0" leftmargin="36" rightmargin="0" linespacing="0.0" spaceabove="3" spacebelow="3" linebreak="space" pagebreak-before="false" initial="-1" bulletsuffix="."/>
+<Layout name="Ordered List 3" alignment="left" bullet="roman" firstindent="0" leftmargin="72" rightmargin="0" linespacing="0.0" spaceabove="3" spacebelow="3" linebreak="space" pagebreak-before="false" initial="-1" bulletsuffix="."/>
+<Layout name="Ordered List 4" alignment="left" bullet="ALPHABETIC" firstindent="0" leftmargin="108" rightmargin="0" linespacing="0.0" spaceabove="3" spacebelow="3" linebreak="space" pagebreak-before="false" initial="-1" bulletsuffix="."/>
+<Layout name="Ordered List 5" alignment="left" bullet="ROMAN" firstindent="0" leftmargin="144" rightmargin="0" linespacing="0.0" spaceabove="3" spacebelow="3" linebreak="space" pagebreak-before="false" initial="-1" bulletsuffix="."/>
+<Layout name="Annotation Title" alignment="centred" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="12" spacebelow="12" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="HyperlinkError" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="HyperlinkWarning" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Bullet Item" alignment="left" bullet="dot" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="3" spacebelow="3" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Maple Plot" alignment="centred" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="List Item" alignment="left" bullet="indent" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="3" spacebelow="3" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Dash Item" alignment="left" bullet="dash" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="3" spacebelow="3" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Error" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Title" alignment="centred" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="12" spacebelow="12" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Normal" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Author" alignment="centred" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="8" spacebelow="8" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Pencil-style name="Pencil 1" pen-color="[0,0,0]" pen-height="1.0" pen-width="1.0" pen-opacity="1.0"/>
+<Pencil-style name="Pencil 2" pen-color="[0,0,255]" pen-height="1.0" pen-width="1.0" pen-opacity="1.0"/>
+<Pencil-style name="Pencil 3" pen-color="[0,0,0]" pen-height="3.0" pen-width="3.0" pen-opacity="1.0"/>
+<Pencil-style name="Pencil 4" pen-color="[0,0,255]" pen-height="3.0" pen-width="3.0" pen-opacity="1.0"/>
+<Pencil-style name="Pencil 5" pen-color="[255,0,0]" pen-height="5.0" pen-width="5.0" pen-opacity="1.0"/>
+<Highlighter-style name="Highlighter 5" pen-color="[255,255,0]" pen-height="48.0" pen-width="48.0" pen-opacity="0.8"/>
+<Highlighter-style name="Highlighter 3" pen-color="[51,255,0]" pen-height="24.0" pen-width="24.0" pen-opacity="0.8"/>
+<Highlighter-style name="Highlighter 4" pen-color="[0,255,255]" pen-height="32.0" pen-width="32.0" pen-opacity="0.8"/>
+<Highlighter-style name="Highlighter 1" pen-color="[255,153,255]" pen-height="12.0" pen-width="8.0" pen-opacity="0.8"/>
+<Highlighter-style name="Highlighter 2" pen-color="[255,204,0]" pen-height="14.0" pen-width="14.0" pen-opacity="0.8"/>
+</Styles>
+<Startup-Code startupcode=""/>
+<Task-table>
+    <Task-category name="&lt;default&gt;"/>
+</Task-table>
+<Task/>
+<Group hide-input="false" labelreference="L3" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">restart:
+with(LinearAlgebra):
+with(CodeGeneration):
+
+interface(warnlevel = 2):</Text-field>
+</Input>
+</Group>
+<Group labelreference="L8" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">################################################################################
+# 0) HELPERS
+################################################################################</Text-field>
+</Input>
+</Group>
+<Group labelreference="L7" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">PrintTitle := proc(s::string)
+<Font encoding="UTF-8">    printf(&quot;==== %s ====\134n&quot;, s);
+</Font>end proc:
+
+WriteTextFile := proc(fname::string, txt::string)
+    local fd;
+    fd := fopen(fname, WRITE, TEXT):
+    fprintf(fd, &quot;%s&quot;, txt):
+    fclose(fd):
+end proc:
+
+MatlabAssignScalar := proc(lhs::string, expr)
+    local rhs;
+    rhs := CodeGeneration:-Matlab(expr, output=string):
+    rhs := StringTools:-RegSubs(&quot;^[[:space:]]*cg[0-9]*[[:space:]]*=[[:space:]]*&quot; = &quot;&quot;, rhs):
+    rhs := StringTools:-RegSubs(&quot;;[[:space:]]*$&quot; = &quot;&quot;, rhs):
+    return cat(lhs, &quot; = &quot;, rhs, &quot;;&quot;);
+end proc:
+
+MatlabAssignMatrix := proc(varname::string, A)
+    local i, j, mA, nA, cs, nm, rhs, s;
+
+    mA := RowDimension(A):
+    nA := ColumnDimension(A):
+
+    cs := []:
+    for i from 1 to mA do
+        for j from 1 to nA do
+            nm := parse(cat(varname, &quot;_&quot;, convert(i,string), &quot;_&quot;, convert(j,string))):
+            cs := [op(cs), nm = A[i,j]]:
+        od:
+    od:
+
+    rhs := CodeGeneration:-Matlab(cs, optimize=tryhard, output=string):
+
+    s := rhs:
+<Font encoding="UTF-8">    s := cat(s, &quot;\134n&quot;, varname, &quot; = [&quot;);
+</Font>    for i from 1 to mA do
+        for j from 1 to nA do
+            s := cat(s, varname, &quot;_&quot;, i, &quot;_&quot;, j);
+            if j &lt; nA then
+                s := cat(s, &quot;, &quot;);
+            end if:
+        od:
+        if i &lt; mA then
+            s := cat(s, &quot;; &quot;);
+        end if:
+    od:
+    s := cat(s, &quot;];&quot;);
+
+    return s:
+end proc:
+
+MatlabAssignVector := proc(varname::string, V)
+    local i, nV, cs, nm, rhs, s;
+
+    nV := Dimension(V):
+
+    cs := []:
+    for i from 1 to nV do
+        nm := parse(cat(varname, &quot;_&quot;, convert(i,string))):
+        cs := [op(cs), nm = V[i]]:
+    od:
+
+    rhs := CodeGeneration:-Matlab(cs, optimize=tryhard, output=string):
+
+    s := rhs:
+<Font encoding="UTF-8">    s := cat(s, &quot;\134n&quot;, varname, &quot; = [&quot;);
+</Font>    for i from 1 to nV do
+        s := cat(s, varname, &quot;_&quot;, i);
+        if i &lt; nV then
+            s := cat(s, &quot;; &quot;);
+        end if:
+    od:
+    s := cat(s, &quot;];&quot;);
+
+    return s:
+end proc:
+
+MakeUnpackQ := proc(n::posint)
+    local i, s;
+    s := &quot;&quot;;
+    for i from 1 to n do
+<Font encoding="UTF-8">        s := cat(s, &quot;q&quot;, i, &quot; = q(&quot;, i, &quot;);\134n&quot;);
+</Font>    od:
+    return s:
+end proc:
+
+MakeUnpackDQ := proc(n::posint)
+    local i, s;
+    s := &quot;&quot;;
+    for i from 1 to n do
+<Font encoding="UTF-8">        s := cat(s, &quot;dq&quot;, i, &quot; = dq(&quot;, i, &quot;);\134n&quot;);
+</Font>    od:
+    return s:
+end proc:
+
+MakeUnpackDDQ := proc(n::posint)
+    local i, s;
+    s := &quot;&quot;;
+    for i from 1 to n do
+<Font encoding="UTF-8">        s := cat(s, &quot;ddq&quot;, i, &quot; = ddq(&quot;, i, &quot;);\134n&quot;);
+</Font>    od:
+    return s:
+end proc:
+
+MakeUnpackPi := proc(PiNames::list)
+    local k, s;
+    s := &quot;&quot;;
+    for k from 1 to nops(PiNames) do
+<Font encoding="UTF-8">        s := cat(s, PiNames[k], &quot; = Pi(&quot;, k, &quot;);\134n&quot;);
+</Font>    od:
+    return s:
+end proc:
+
+WriteMatlabFunction := proc(fname::string, header::string, unpack::string, body::string)
+    local txt;
+<Font encoding="UTF-8">    txt := cat(&quot;function &quot;, header, &quot;\134n&quot;, unpack, body, &quot;end\134n&quot;);
+</Font>    WriteTextFile(fname, txt):
+end proc:</Text-field>
+</Input>
+</Group>
+<Group labelreference="L11" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">################################################################################
+# 1) USER INPUT BLOCK  (EDIT ONLY THIS BLOCK PER ROBOT)
+################################################################################</Text-field>
+</Input>
+</Group>
+<Group labelreference="L10" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">robotName := &quot;UR5&quot;:
+
+# Optional base/tool transforms
+Tbase := IdentityMatrix(4):
+Ttool := IdentityMatrix(4):
+
+# Craig modified DH
+# Row i = [a_{i-1}, alpha_{i-1}, d_i, theta_i]
+
+MDH := Matrix(6,4,[
+    [0,        0,     d1,  q1],
+    [0,      Pi/2,     0,  q2],
+    [a2,       0,      0,  q3],
+    [a3,       0,     d4,  q4],
+    [0,      Pi/2,    d5,  q5],
+    [0,     -Pi/2,    d6,  q6]
+]):
+
+GeomNames := [
+    &quot;d1&quot;,
+    &quot;a2&quot;,
+    &quot;a3&quot;,
+    &quot;d4&quot;,
+    &quot;d5&quot;,
+    &quot;d6&quot;
+]:
+
+# Joint types: &quot;R&quot; for revolute, &quot;P&quot; for prismatic
+jointType := [&quot;R&quot;,&quot;R&quot;,&quot;R&quot;,&quot;R&quot;,&quot;R&quot;,&quot;R&quot;]:
+
+# If true, inertia tensors use Ixy/Ixz/Iyz.
+# If false, only Ixx/Iyy/Izz are active in the symbolic model.
+useProductsOfInertia := true:</Text-field>
+</Input>
+</Group>
+<Group labelreference="L14" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">################################################################################
+# 2) SIZE AND VARIABLES
+################################################################################</Text-field>
+</Input>
+</Group>
+<Group labelreference="L13" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">n := RowDimension(MDH):
+
+q   := Vector([seq(MDH[i,4], i=1..n)]):
+dq  := Vector([seq(parse(cat(&quot;dq&quot;,i)), i=1..n)]):
+ddq := Vector([seq(parse(cat(&quot;ddq&quot;,i)), i=1..n)]):
+
+PrintTitle(cat(&quot;Model size n = &quot;, convert(n,string))):</Text-field>
+</Input>
+<Output><Text-field style="Line Printed Output" layout="Line Printed Output">==== Model size n = 6 ====
+</Text-field>
+</Output>
+</Group>
+<Group labelreference="L15" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">################################################################################
+# 3) SYMBOLIC PARAMETER VECTOR Pi  (GEOMETRY + DYNAMICS)
+################################################################################</Text-field>
+</Input>
+</Group>
+<Group labelreference="L12" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">PiNames := [
+    op(GeomNames),
+
+    seq(cat(&quot;m&quot;,i), i=1..n),
+
+    seq(cat(&quot;rcx&quot;,i), i=1..n),
+    seq(cat(&quot;rcy&quot;,i), i=1..n),
+    seq(cat(&quot;rcz&quot;,i), i=1..n),
+
+    seq(cat(&quot;Ixx&quot;,i), i=1..n),
+    seq(cat(&quot;Iyy&quot;,i), i=1..n),
+    seq(cat(&quot;Izz&quot;,i), i=1..n),
+
+    seq(cat(&quot;Ixy&quot;,i), i=1..n),
+    seq(cat(&quot;Ixz&quot;,i), i=1..n),
+    seq(cat(&quot;Iyz&quot;,i), i=1..n),
+
+    &quot;g&quot;
+]:
+
+PiVec := Vector([seq(parse(PiNames[k]), k=1..nops(PiNames))]):
+
+m  := Array(1..n):
+rc := Array(1..n):
+Ic := Array(1..n):
+
+for i from 1 to n do
+    m[i] := parse(cat(&quot;m&quot;, i)):
+
+    rc[i] := Vector([
+        parse(cat(&quot;rcx&quot;, i)),
+        parse(cat(&quot;rcy&quot;, i)),
+        parse(cat(&quot;rcz&quot;, i)),
+        1
+    ]):
+
+    if useProductsOfInertia then
+        Ic[i] := Matrix(3,3,[
+            [parse(cat(&quot;Ixx&quot;,i)), parse(cat(&quot;Ixy&quot;,i)), parse(cat(&quot;Ixz&quot;,i))],
+            [parse(cat(&quot;Ixy&quot;,i)), parse(cat(&quot;Iyy&quot;,i)), parse(cat(&quot;Iyz&quot;,i))],
+            [parse(cat(&quot;Ixz&quot;,i)), parse(cat(&quot;Iyz&quot;,i)), parse(cat(&quot;Izz&quot;,i))]
+        ]):
+    else
+        Ic[i] := DiagonalMatrix([
+            parse(cat(&quot;Ixx&quot;,i)),
+            parse(cat(&quot;Iyy&quot;,i)),
+            parse(cat(&quot;Izz&quot;,i))
+        ]):
+    end if;
+od:
+
+g := parse(&quot;g&quot;):
+
+PrintTitle(&quot;Geometry + dynamic parameters ready&quot;):
+</Text-field>
+</Input>
+<Output><Text-field style="Line Printed Output" layout="Line Printed Output">==== Geometry + dynamic parameters ready ====
+</Text-field>
+</Output>
+</Group>
+<Group labelreference="L17" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">################################################################################
+# 4) CRAIG MODIFIED DH TRANSFORM
+################################################################################</Text-field>
+</Input>
+</Group>
+<Group labelreference="L16" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Amdh := proc(ai, alphai, di, thetai)
+    local ct, st, ca, sa;
+    ct := cos(thetai): st := sin(thetai):
+    ca := cos(alphai): sa := sin(alphai):
+
+    return Matrix(4,4,[
+        [   ct,      -st,      0,      ai ],
+        [ st*ca,   ct*ca,   -sa,   -di*sa ],
+        [ st*sa,   ct*sa,    ca,    di*ca ],
+        [    0,        0,     0,       1 ]
+    ]);
+end proc:</Text-field>
+</Input>
+</Group>
+<Group labelreference="L19" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">################################################################################
+# 5) ALL CUMULATIVE TRANSFORMS
+################################################################################</Text-field>
+</Input>
+</Group>
+<Group labelreference="L18" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">A := Array(1..n):
+T := Array(0..n):
+
+T[0] := Tbase:
+
+for i from 1 to n do
+    A[i] := Amdh(MDH[i,1], MDH[i,2], MDH[i,3], MDH[i,4]):
+    T[i] := T[i-1] . A[i]:
+od:
+
+T0n := T[n]:
+T0e := T0n . Ttool:
+pe  := Vector([T0e[1,4], T0e[2,4], T0e[3,4]]):
+
+PrintTitle(&quot;All cumulative transforms ready&quot;):</Text-field>
+</Input>
+<Output><Text-field style="Line Printed Output" layout="Line Printed Output">==== All cumulative transforms ready ====
+</Text-field>
+</Output>
+</Group>
+<Group labelreference="L21" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">################################################################################
+# 6) EXTRACT FRAME ROTATIONS, ORIGINS, AXES
+################################################################################</Text-field>
+</Input>
+</Group>
+<Group labelreference="L20" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Rot := Array(0..n):
+p   := Array(0..n):
+zv  := Array(0..n):
+
+Rot[0] := Matrix(3,3,(r,c) -&gt; T[0][r,c]):
+p[0]   := Vector([T[0][1,4], T[0][2,4], T[0][3,4]]):
+zv[0]  := Vector([Rot[0][1,3], Rot[0][2,3], Rot[0][3,3]]):
+
+for i from 1 to n do
+    Rot[i] := Matrix(3,3,(r,c) -&gt; T[i][r,c]):
+    p[i]   := Vector([T[i][1,4], T[i][2,4], T[i][3,4]]):
+    zv[i]  := Vector([Rot[i][1,3], Rot[i][2,3], Rot[i][3,3]]):
+od:
+
+PrintTitle(&quot;Frame origins and z-axes extracted&quot;):</Text-field>
+</Input>
+<Output><Text-field style="Line Printed Output" layout="Line Printed Output">==== Frame origins and z-axes extracted ====
+</Text-field>
+</Output>
+</Group>
+<Group labelreference="L23" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">################################################################################
+# 7) GENERAL GEOMETRIC JACOBIAN FOR CRAIG-MDH
+################################################################################</Text-field>
+</Input>
+</Group>
+<Group labelreference="L22" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Jv := Matrix(3, n, 0):
+Jw := Matrix(3, n, 0):
+
+for i from 1 to n do
+    if jointType[i] = &quot;R&quot; then
+        Jv[1..3, i] := CrossProduct(zv[i], pe - p[i]);
+        Jw[1..3, i] := zv[i];
+    elif jointType[i] = &quot;P&quot; then
+        Jv[1..3, i] := zv[i];
+        Jw[1..3, i] := Vector([0,0,0]);
+    else
+<Font encoding="UTF-8">        error &quot;jointType[%1] must be \134&quot;R\134&quot; or \134&quot;P\134&quot;&quot;, i;
+</Font>    end if;
+od:
+
+Jg := &lt; Jv ; Jw &gt;:
+
+PrintTitle(&quot;General geometric Jacobian ready&quot;):</Text-field>
+</Input>
+<Output><Text-field style="Line Printed Output" layout="Line Printed Output">==== General geometric Jacobian ready ====
+</Text-field>
+</Output>
+</Group>
+<Group labelreference="L25" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">################################################################################
+# 8) COM POSITIONS AND GENERAL COM JACOBIANS
+################################################################################</Text-field>
+</Input>
+</Group>
+<Group labelreference="L24" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">pc  := Array(1..n):
+Jvc := Array(1..n):
+Jwc := Array(1..n):
+
+for i from 1 to n do
+    pc[i] := Vector([
+        add(T[i][1,k]*rc[i][k], k=1..4),
+        add(T[i][2,k]*rc[i][k], k=1..4),
+        add(T[i][3,k]*rc[i][k], k=1..4)
+    ]):
+od:
+
+for ell from 1 to n do
+    Jvc[ell] := Matrix(3, n, 0):
+    Jwc[ell] := Matrix(3, n, 0):
+
+    for j from 1 to n do
+        if j &lt;= ell then
+            if jointType[j] = &quot;R&quot; then
+                Jvc[ell][1..3, j] := CrossProduct(zv[j], pc[ell] - p[j]);
+                Jwc[ell][1..3, j] := zv[j];
+            elif jointType[j] = &quot;P&quot; then
+                Jvc[ell][1..3, j] := zv[j];
+                Jwc[ell][1..3, j] := Vector([0,0,0]);
+            else
+<Font encoding="UTF-8">                error &quot;jointType[%1] must be \134&quot;R\134&quot; or \134&quot;P\134&quot;&quot;, j;
+</Font>            end if;
+        end if;
+    od:
+od:
+
+PrintTitle(&quot;General COM Jacobians ready&quot;):</Text-field>
+</Input>
+<Output><Text-field style="Line Printed Output" layout="Line Printed Output">==== General COM Jacobians ready ====
+</Text-field>
+</Output>
+</Group>
+<Group labelreference="L27" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">################################################################################
+# 9) DYNAMICS: M(q), C(q,dq), G(q), h(q,dq)=C(q,dq)*dq
+################################################################################</Text-field>
+</Input>
+</Group>
+<Group labelreference="L26" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Mq := Matrix(n, n, 0):
+
+for i from 1 to n do
+    Mq := Mq
+        + Transpose(Jvc[i]) . (m[i] * Jvc[i])
+        + Transpose(Jwc[i]) . Rot[i] . Ic[i] . Transpose(Rot[i]) . Jwc[i];
+od:
+
+g0 := Vector([0, 0, g]):
+
+P := 0:
+for i from 1 to n do
+    P := P + m[i] * DotProduct(g0, pc[i]);
+od:
+
+Gq := Vector([seq(diff(P, q[i]), i=1..n)]):
+
+Cq := Matrix(n, n, 0):
+
+for k from 1 to n do
+    for j from 1 to n do
+        Cq[k,j] := add(
+            (1/2) * (
+                diff(Mq[k,j], q[i]) +
+                diff(Mq[k,i], q[j]) -
+                diff(Mq[i,j], q[k])
+            ) * dq[i],
+            i = 1..n
+        );
+    od:
+od:
+
+hq := Cq . dq:
+
+tau_id := Mq . ddq + Cq . dq + Gq:
+
+PrintTitle(&quot;M(q), C(q,dq), G(q), h(q,dq), inverse dynamics ready&quot;):</Text-field>
+</Input>
+<Output><Text-field style="Line Printed Output" layout="Line Printed Output">==== M(q), C(q,dq), G(q), h(q,dq), inverse dynamics ready ====
+</Text-field>
+</Output>
+</Group>
+<Group labelreference="L29" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">################################################################################
+# 10) EVALUATED EXPRESSIONS FOR EXPORT
+################################################################################</Text-field>
+</Input>
+</Group>
+<Group labelreference="L28" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Texp := Array(0..n):
+for i from 0 to n do
+    Texp[i] := eval(T[i]):
+od:
+
+T0e_exp := eval(T0e):
+
+Jv_exp := eval(Jv):
+Jw_exp := eval(Jw):
+Jg_exp := eval(Jg):
+
+M_exp := eval(Mq):
+C_exp := eval(Cq):
+G_exp := eval(Gq):
+h_exp := eval(hq):</Text-field>
+</Input>
+</Group>
+<Group labelreference="L31" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">################################################################################
+# 11) MATLAB EXPORT
+################################################################################</Text-field>
+</Input>
+</Group>
+<Group labelreference="L30" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">unpack_q   := MakeUnpackQ(n):
+unpack_dq  := MakeUnpackDQ(n):
+unpack_ddq := MakeUnpackDDQ(n):
+unpack_Pi  := MakeUnpackPi(PiNames):
+
+fname_fkine := cat(robotName, &quot;_fkine.m&quot;):
+fname_fkall := cat(robotName, &quot;_fkall.m&quot;):
+fname_jac   := cat(robotName, &quot;_jacobian_geometric.m&quot;):
+fname_M     := cat(robotName, &quot;_M.m&quot;):
+fname_C     := cat(robotName, &quot;_C.m&quot;):
+fname_G     := cat(robotName, &quot;_G.m&quot;):
+fname_h     := cat(robotName, &quot;_h.m&quot;):
+fname_idyn  := cat(robotName, &quot;_idyn.m&quot;):
+fname_fdyn  := cat(robotName, &quot;_fdyn.m&quot;):
+fname_MCG   := cat(robotName, &quot;_MCG.m&quot;):
+
+# ---------- fkine ----------
+WriteMatlabFunction(
+    fname_fkine,
+    cat(&quot;T0e = &quot;, robotName, &quot;_fkine(q,Pi)&quot;),
+    cat(unpack_q, unpack_Pi),
+    MatlabAssignMatrix(&quot;T0e&quot;, T0e_exp)
+):
+
+# ---------- fkall ----------
+<Font encoding="UTF-8">fkall_body := cat(&quot;Tlist = cell(&quot;, n+1, &quot;,1);\134n&quot;):
+</Font>
+for i from 0 to n do
+<Font encoding="UTF-8">    fkall_body := cat(fkall_body, MatlabAssignMatrix(cat(&quot;Ti&quot;, i), Texp[i]), &quot;\134n&quot;):
+    fkall_body := cat(fkall_body, &quot;Tlist{&quot;, i+1, &quot;} = Ti&quot;, i, &quot;;\134n&quot;);
+</Font>od:
+
+<Font encoding="UTF-8">fkall_body := cat(fkall_body, MatlabAssignMatrix(&quot;T0e&quot;, T0e_exp), &quot;\134n&quot;):
+</Font>
+WriteMatlabFunction(
+    fname_fkall,
+    cat(&quot;[Tlist,T0e] = &quot;, robotName, &quot;_fkall(q,Pi)&quot;),
+    cat(unpack_q, unpack_Pi),
+    fkall_body
+):
+
+# ---------- geometric Jacobian ----------
+WriteMatlabFunction(
+    fname_jac,
+    cat(&quot;[Jv,Jw,Jg] = &quot;, robotName, &quot;_jacobian_geometric(q,Pi)&quot;),
+    cat(unpack_q, unpack_Pi),
+    cat(
+<Font encoding="UTF-8">        MatlabAssignMatrix(&quot;Jv&quot;, Jv_exp), &quot;\134n&quot;,
+        MatlabAssignMatrix(&quot;Jw&quot;, Jw_exp), &quot;\134n&quot;,
+</Font>        MatlabAssignMatrix(&quot;Jg&quot;, Jg_exp)
+    )
+):
+
+# ---------- inertia ----------
+WriteMatlabFunction(
+    fname_M,
+    cat(&quot;M = &quot;, robotName, &quot;_M(q,Pi)&quot;),
+    cat(unpack_q, unpack_Pi),
+    MatlabAssignMatrix(&quot;M&quot;, M_exp)
+):
+
+# ---------- Coriolis ----------
+WriteMatlabFunction(
+    fname_C,
+    cat(&quot;C = &quot;, robotName, &quot;_C(q,dq,Pi)&quot;),
+    cat(unpack_q, unpack_dq, unpack_Pi),
+    MatlabAssignMatrix(&quot;C&quot;, C_exp)
+):
+
+# ---------- gravity ----------
+WriteMatlabFunction(
+    fname_G,
+    cat(&quot;G = &quot;, robotName, &quot;_G(q,Pi)&quot;),
+    cat(unpack_q, unpack_Pi),
+    MatlabAssignVector(&quot;G&quot;, G_exp)
+):
+
+# ---------- h = C*dq ----------
+WriteMatlabFunction(
+    fname_h,
+    cat(&quot;h = &quot;, robotName, &quot;_h(q,dq,Pi)&quot;),
+    cat(unpack_q, unpack_dq, unpack_Pi),
+    MatlabAssignVector(&quot;h&quot;, h_exp)
+):
+
+# ---------- wrappers ----------
+WriteTextFile(
+    fname_idyn,
+    cat(
+<Font encoding="UTF-8">        &quot;function tau = &quot;, robotName, &quot;_idyn(q,dq,ddq,Pi)\134n&quot;,
+        &quot;M = &quot;, robotName, &quot;_M(q,Pi);\134n&quot;,
+        &quot;h = &quot;, robotName, &quot;_h(q,dq,Pi);\134n&quot;,
+        &quot;G = &quot;, robotName, &quot;_G(q,Pi);\134n&quot;,
+        &quot;tau = M*ddq + h + G;\134n&quot;,
+        &quot;end\134n&quot;
+</Font>    )
+):
+
+WriteTextFile(
+    fname_fdyn,
+    cat(
+<Font encoding="UTF-8">        &quot;function qdd = &quot;, robotName, &quot;_fdyn(q,dq,tau,Pi)\134n&quot;,
+        &quot;M = &quot;, robotName, &quot;_M(q,Pi);\134n&quot;,
+        &quot;h = &quot;, robotName, &quot;_h(q,dq,Pi);\134n&quot;,
+        &quot;G = &quot;, robotName, &quot;_G(q,Pi);\134n&quot;,
+        &quot;qdd = M \134\134 (tau - h - G);\134n&quot;,
+        &quot;end\134n&quot;
+</Font>    )
+):
+
+WriteTextFile(
+    fname_MCG,
+    cat(
+<Font encoding="UTF-8">        &quot;function [M,C,G] = &quot;, robotName, &quot;_MCG(q,dq,Pi)\134n&quot;,
+        &quot;M = &quot;, robotName, &quot;_M(q,Pi);\134n&quot;,
+        &quot;C = &quot;, robotName, &quot;_C(q,dq,Pi);\134n&quot;,
+        &quot;G = &quot;, robotName, &quot;_G(q,Pi);\134n&quot;,
+        &quot;end\134n&quot;
+</Font>    )
+):
+
+PrintTitle(&quot;MATLAB export complete&quot;):</Text-field>
+</Input>
+<Output><Text-field style="Line Printed Output" layout="Line Printed Output">==== MATLAB export complete ====
+</Text-field>
+</Output>
+</Group>
+<Group labelreference="L33" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">################################################################################
+# 12) PARAMETERIZATION
+################################################################################</Text-field>
+</Input>
+</Group>
+<Group labelreference="L32" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal"><Equation executable="true" style="2D Input" input-equation="" display="LUklbXJvd0c2Iy9JK21vZHVsZW5hbWVHNiJJLFR5cGVzZXR0aW5nR0koX3N5c2xpYkdGJzYlLUkjbW9HRiQ2LVEifkYnLyUsbWF0aHZhcmlhbnRHUSdub3JtYWxGJy8lJmZlbmNlR1EmZmFsc2VGJy8lKnNlcGFyYXRvckdGNC8lKXN0cmV0Y2h5R0Y0LyUqc3ltbWV0cmljR0Y0LyUobGFyZ2VvcEdGNC8lLm1vdmFibGVsaW1pdHNHRjQvJSdhY2NlbnRHRjQvJSdsc3BhY2VHUSYwLjBlbUYnLyUncnNwYWNlR0ZDLyUrZXhlY3V0YWJsZUdGNEYv">LUklbXJvd0c2Iy9JK21vZHVsZW5hbWVHNiJJLFR5cGVzZXR0aW5nR0koX3N5c2xpYkdGJzYlLUkjbW9HRiQ2LVEifkYnLyUsbWF0aHZhcmlhbnRHUSdub3JtYWxGJy8lJmZlbmNlR1EmZmFsc2VGJy8lKnNlcGFyYXRvckdGNC8lKXN0cmV0Y2h5R0Y0LyUqc3ltbWV0cmljR0Y0LyUobGFyZ2VvcEdGNC8lLm1vdmFibGVsaW1pdHNHRjQvJSdhY2NlbnRHRjQvJSdsc3BhY2VHUSYwLjBlbUYnLyUncnNwYWNlR0ZDLyUrZXhlY3V0YWJsZUdGNEYv</Equation></Text-field>
+</Input>
+</Group>
+</Worksheet>
