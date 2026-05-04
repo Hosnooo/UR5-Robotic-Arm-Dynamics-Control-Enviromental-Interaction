@@ -2,7 +2,7 @@
 
 MATLAB simulation environment for studying the dynamics, control, trajectory tracking, impedance control, and environmental interaction of a UR5 robotic manipulator.
 
-<img width="800" height="506" alt="vid" src="https://github.com/user-attachments/assets/66cb3fe2-8320-45dd-b0bb-22432823f3c6" />
+<img width="1562" height="988" alt="ur5_pick_place_dynamics_control" src="https://github.com/user-attachments/assets/d406826a-8fd1-4c0a-98e5-e1bfd4dc5edb" />
 
 
 ## Overview
