@@ -2,6 +2,8 @@
 
 MATLAB simulation environment for studying the dynamics, control, trajectory tracking, impedance control, and environmental interaction of a UR5 robotic manipulator.
 
+<video src="assets/ur5_pick_place_dynamics_control.mp4" controls width="800"></video>
+
 ## Overview
 
 This repository provides MATLAB scripts for simulating and comparing multiple robotic-arm control strategies for a 6-DOF UR5 manipulator. The project includes generated robot dynamics functions, parameter definitions, controller simulations, trajectory tracking experiments, impedance-control scenarios, inverse-kinematics task animation, full nonlinear dynamics simulation, and constrained environmental interaction tasks.
